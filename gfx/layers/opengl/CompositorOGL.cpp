@@ -1401,6 +1401,7 @@ CompositorOGL::EndFrame()
   }
 
   mCurrentRenderTarget = nullptr;
+  mRenderTargetStack.Clear();
 
   if (mTexturePool) {
     mTexturePool->EndFrame();
@@ -1507,6 +1508,7 @@ CompositorOGL::AbortFrame()
   mGLContext->fBindBuffer(LOCAL_GL_ARRAY_BUFFER, 0);
   mFrameInProgress = false;
   mCurrentRenderTarget = nullptr;
+  mRenderTargetStack.Clear();
 
   if (mTexturePool) {
     mTexturePool->EndFrame();
