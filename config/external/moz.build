@@ -44,6 +44,8 @@ external_dirs += [
     'media/libspeex_resampler',
     'media/libstagefright',
     'media/libsoundtouch',
+    'media/sphinxbase',
+    'media/pocketsphinx',
 ]
 
 PARALLEL_DIRS += ['../../' + i for i in external_dirs]

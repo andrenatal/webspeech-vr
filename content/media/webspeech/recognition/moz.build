@@ -3,16 +3,16 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+MOCHITEST_MANIFESTS += ['test/mochitest.ini']
+
 XPIDL_MODULE = 'dom_webspeechrecognition'
 
 XPIDL_SOURCES = [
-  'nsIDOMSpeechRecognitionEvent.idl',
   'nsISpeechRecognitionService.idl'
 ]
 
-TEST_DIRS += ['test']
-
 EXPORTS.mozilla.dom += [
+    'PocketSphinxSpeechRecognitionService.h',
     'SpeechGrammar.h',
     'SpeechGrammarList.h',
     'SpeechRecognition.h',
@@ -20,13 +20,14 @@ EXPORTS.mozilla.dom += [
     'SpeechRecognitionResult.h',
     'SpeechRecognitionResultList.h',
     'SpeechStreamListener.h',
-    'test/FakeSpeechRecognitionService.h',
+    'test/FakeSpeechRecognitionService.h'
 ]
 
 UNIFIED_SOURCES += [
     'endpointer.cc',
     'energy_endpointer.cc',
     'energy_endpointer_params.cc',
+    'PocketSphinxSpeechRecognitionService.cpp',    
     'SpeechGrammar.cpp',
     'SpeechGrammarList.cpp',
     'SpeechRecognition.cpp',
@@ -34,13 +35,16 @@ UNIFIED_SOURCES += [
     'SpeechRecognitionResult.cpp',
     'SpeechRecognitionResultList.cpp',
     'SpeechStreamListener.cpp',
-    'test/FakeSpeechRecognitionService.cpp',
+    'test/FakeSpeechRecognitionService.cpp'    
 ]
 
 LOCAL_INCLUDES += [
     '/dom/base',
+    '/media/pocketsphinx',
+    '/media/sphinxbase',
 ]
 
 include('/ipc/chromium/chromium-config.mozbuild')
+
 
 FINAL_LIBRARY = 'gklayout'
