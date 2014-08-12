@@ -1,0 +1,15 @@
+error: patch failed: b2g/app/b2g.js:1013 error: b2g/app/b2g.js: patch does not apply (OK)
+error: patch failed: config/external/moz.build:45 error: config/external/moz.build: patch does not apply (OK)
+error: patch failed: content/media/webspeech/recognition/SpeechGrammarList.h:24 error: content/media/webspeech/recognition/SpeechGrammarList.h: patch does not apply ok
+
+
+error: patch failed: content/media/webspeech/recognition/SpeechRecognition.cpp:693 error: content/media/webspeech/recognition/SpeechRecognition.cpp: patch does not apply
+
+error: patch failed: content/media/webspeech/recognition/moz.build:12 error: content/media/webspeech/recognition/moz.build: patch does not apply ok
+ 
+
+error: patch failed: layout/build/moz.build:73 error: layout/build/moz.build: patch does not apply ok
+
+
+
+error: patch failed: toolkit/library/libxul.mk:59 error: toolkit/library/libxul.mk: patch does not apply 

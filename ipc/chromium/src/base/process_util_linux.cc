@@ -266,6 +266,7 @@ bool LaunchApp(const CommandLine& cl,
 }
 
 void SetCurrentProcessPrivileges(ChildPrivileges privs) {
+return;
   if (privs == PRIVILEGES_INHERIT) {
     return;
   }

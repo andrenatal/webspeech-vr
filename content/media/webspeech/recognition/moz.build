@@ -8,7 +8,8 @@ MOCHITEST_MANIFESTS += ['test/mochitest.ini']
 XPIDL_MODULE = 'dom_webspeechrecognition'
 
 XPIDL_SOURCES = [
-  'nsISpeechRecognitionService.idl'
+  'nsIDOMSpeechRecognitionEvent.idl',
+  'nsISpeechRecognitionService.idl',
 ]
 
 EXPORTS.mozilla.dom += [
